@@ -87,7 +87,19 @@
 
 ## 安装
 
-### 方式一：本地目录 / tarball
+### 方式一：GitHub 仓库 / Release tarball
+
+仓库：<https://github.com/wyp809/dsh-peak-tint>
+
+```bash
+# 源码安装
+dsh plugin --profile <profile> add https://github.com/wyp809/dsh-peak-tint
+
+# 或用预构建 tarball（免构建，几秒装完）
+dsh plugin --profile <profile> add https://github.com/wyp809/dsh-peak-tint/releases/download/v0.1.0/dsh-peak-tint-0.1.0.tgz
+```
+
+### 方式二：本地目录 / 本地 tarball
 
 ```bash
 dsh plugin --profile <profile> add <本目录的绝对路径>
@@ -99,7 +111,16 @@ dsh plugin --profile <profile> add <本目录的绝对路径>
 dsh plugin --profile <profile> add ./dsh-peak-tint-0.1.0.tgz
 ```
 
-### 方式二：设置界面
+### 方式三：npm（npm 包发布后可用）
+
+```bash
+npm install -g dsh-peak-tint
+dsh plugin --profile <profile> add dsh-peak-tint
+```
+
+> npm 上架需单独走一次 `npm publish`，目前以 GitHub 仓库 / Release 为准。
+
+### 方式四：设置界面
 
 设置 → 插件 → 粘贴本仓库 URL 或 `.tgz` 绝对路径。
 
