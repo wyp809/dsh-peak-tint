@@ -1,0 +1,60 @@
+{
+  "name": "dsh-peak-tint",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "description": "Peak / off-peak pricing tint for DeepSeek Harness — the UI itself changes colour by billing window, with editable windows and gradient palettes.",
+  "license": "MIT",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "deepseek",
+    "pricing",
+    "theme",
+    "peak-hours"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "icon.svg",
+    "locale/*.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "icon": "./icon.svg",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wyp809/dsh-peak-tint.git"
+  },
+  "homepage": "https://github.com/wyp809/dsh-peak-tint#readme",
+  "bugs": {
+    "url": "https://github.com/wyp809/dsh-peak-tint/issues"
+  },
+  "author": "wyp809 <2387926212@qq.com>",
+  "meta": {
+    "title": "峰谷染色 Peak Tint",
+    "description": "按 DeepSeek API 原价 / 半价时段给界面染色；时段与渐变色都可自调。"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-slots",
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-settings-plugins"
+      ]
+    }
+  }
+}
