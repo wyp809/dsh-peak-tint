@@ -111,16 +111,7 @@ dsh plugin --profile <profile> add <本目录的绝对路径>
 dsh plugin --profile <profile> add ./dsh-peak-tint-0.1.0.tgz
 ```
 
-### 方式三：npm（npm 包发布后可用）
-
-```bash
-npm install -g dsh-peak-tint
-dsh plugin --profile <profile> add dsh-peak-tint
-```
-
-> npm 上架需单独走一次 `npm publish`，目前以 GitHub 仓库 / Release 为准。
-
-### 方式四：设置界面
+### 方式三：设置界面
 
 设置 → 插件 → 粘贴本仓库 URL 或 `.tgz` 绝对路径。
 
